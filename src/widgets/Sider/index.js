@@ -24,8 +24,6 @@ export default {
       return '';
     }
 
-    this.getMenuTree();
-
     return (
       <el-aside class="sider-widget-wrap" width="auto">
         <div class="toggle-collapse" onClick={ this.handletoggleMenuCollapse }>
@@ -37,7 +35,10 @@ export default {
   },
   methods: {
     /* =----------------= some data =----------------= */
-    getMenuTree() {
+    getSideTree() {
+      /**
+       * 根据路由对应权限找到顶级节点 根据顶级节点的子节点生成侧边栏
+       */
       const { permissionsIndexById, menuTree } = this.session;
       const activeMenu = this.appActiveMenu;
 
@@ -67,9 +68,9 @@ export default {
 
     /* =----------------= renders =----------------= */
     renderMenu() {
-      const { allItems, activeItem } = this.getMenuTree();
+      const { allItems, activeItem } = this.getSideTree();
 
-      const activeIndex = activeItem.parents.concat(activeItem.id).join('a');
+      const activeIndex = activeItem.parents.concat(activeItem.id).join('-');
 
       return (
         <el-menu
@@ -93,7 +94,7 @@ export default {
 
           titleList.push(<span>{ child.display_name }</span>);
 
-          const index = child.parents.concat(child.id).join('a');
+          const index = child.parents.concat(child.id).join('-');
 
           if (!child.children || !child.children.length) {
 

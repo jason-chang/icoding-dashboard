@@ -120,11 +120,11 @@ module.exports.getRoutes = function getRoutes() {
 
   const routes = [
     {
-      path: '/dashboard/',
+      path: '/',
       redirect: { name: 'dashboard.overview' },
     },
     {
-      path: '/dashboard/404',
+      path: '/404',
       name: 'dashboard.not-found',
       component: resolveView('@/views/404'),
       meta: { title: '404-PageNotFound' },
@@ -137,7 +137,7 @@ module.exports.getRoutes = function getRoutes() {
       },
     },
     {
-      path: '/dashboard',
+      path: '/',
       component: resolveView('@/views/Main'),
       children: mainRoutes, // app 路由
     },

@@ -125,8 +125,8 @@ const session = {
       // 如果登陆加载 用户权限
 
       if (store.getters.authorized) {
-        const apiUrl = $lib.helpers.route('dash_api.util.permissions');
-        const { data: { data: permissions } } = await Vue.axios.get(apiUrl, {
+        // const apiUrl = $lib.helpers.route('dash_api.util.permissions');
+        const { data: { data: permissions } } = await Vue.axios.get('fake/permissions.json', {
           headers: { Authorization: upperFirst(`${store.state.tokenType} ${store.state.jwt}`) },
         });
 

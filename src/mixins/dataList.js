@@ -45,7 +45,6 @@ export default {
       const api = this.$_dataListUserApiDisable;
       try {
         const apiUrl = $lib.helpers.route(api, { id: row.id });
-        console.info(apiUrl);
 
         const { data: { status, message } } = await this.$http.post(apiUrl, this.form);
 

@@ -27,8 +27,6 @@ require('@/core/debug');
 
 require('@/core/request');
 
-require('@/lib/helpers');
-
 require('@/core/error');
 
 require('@/core/events');

@@ -51,7 +51,7 @@
     },
     data() {
       return {
-        loading: true,
+        loading: false,
         loadTimer: null,
 
         filterForm: clone(this.filterFormDefault),
@@ -78,7 +78,7 @@
     },
     computed: {},
     mounted() {
-      this.loadData();
+      // this.loadData();
     },
     methods: {
       reload() {

@@ -20,7 +20,7 @@ const routes = getRoutes();
 
 // Router
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   linkActiveClass: 'active',
   linkExactActiveClass: 'active',
   routes,

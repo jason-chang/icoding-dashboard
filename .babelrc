@@ -1,0 +1,29 @@
+{
+  "comments": false,
+  "env": {
+    "test": {
+      "presets": [
+        ["env", {
+          "targets": { "node": 7 }
+        }],
+        "stage-0",
+        "stage-2"
+      ],
+      "plugins": ["istanbul"]
+    },
+    "app": {
+      "presets": [
+        ["env", {
+          "modules": false,
+          "targets": {"browsers": ["chrome 55"]}
+        }],
+        "stage-0",
+        "stage-2"
+      ]
+    }
+  },
+  "plugins": [
+    "transform-vue-jsx",
+    "transform-runtime"
+  ]
+}

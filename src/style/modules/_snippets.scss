@@ -1,0 +1,13 @@
+
+// app 编辑状态隐藏滚动条
+.editing {
+  width: 100vw; height: 100vh; overflow: hidden;
+}
+
+//
+.editor-wrap {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(240, 240, 240, .9);
+  display: flex; justify-content: center; align-items: center; z-index: 20;
+
+  .editor-card { margin-top: -30px; }
+}

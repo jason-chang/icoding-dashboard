@@ -1,0 +1,27 @@
+
+/* Reset CSS */
+* { padding: 0; margin: 0; box-sizing: border-box; }
+ul,
+li { list-style: none; }
+a { text-decoration: none; outline: none; }
+a:hover,
+a:focus { text-decoration: none; }
+body { font-family: "Arial","Microsoft YaHei", SansSerif; font-size: 14px; color: black; }
+input,
+textarea,
+button { border: 1px solid #ABABAB; border-radius: 2px; outline: none; vertical-align: middle; }
+input { padding: 4px 5px; font-family: inherit; }
+button { padding: 3px 5px; background: inherit; }
+input::-moz-placeholder { font-family: "Arial","Microsoft YaHei"; font-size: inherit; }
+input::-webkit-input-placeholder { font-family: "Arial","Microsoft YaHei"; font-size: inherit; }
+input:-ms-input-placeholder { font-family: "Arial","Microsoft YaHei"; font-size: inherit; }
+button,
+input[type=submit],
+input[type=button] { font-family: inherit; }
+
+.emoji {
+  width: 1.5em;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: -5px;
+}

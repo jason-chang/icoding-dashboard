@@ -1,0 +1,28 @@
+stages:
+- test
+- deploy
+
+# Select what we should cache between builds
+cache:
+  paths:
+  - .env
+
+# Run our tests
+test:
+  stage: test
+  tags:
+  - test
+  before_script:
+  - test -f .env || cp .env.example .env
+  script:
+  - vendor/bin/phpunit --configuration phpunit.xml --coverage-text --colors=never
+
+deploy:
+  stage: deploy
+  tags:
+  - deploy
+  only:
+    refs:
+    - master
+  script:
+    - git pull origin master

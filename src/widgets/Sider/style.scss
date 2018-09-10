@@ -1,0 +1,28 @@
+@import "~@/style/modules/variables";
+
+.sider-widget-wrap {
+  border-right: 1px solid #e6e6e6; padding-top: 15px; position: relative; overflow: visible !important; height: calc(100vh - 60px); position: fixed; bottom: 0; z-index: 10;
+
+  .el-menu {
+    border-right: 0px;
+
+    i.iconfont { display: inline-block; width: 20px; text-align: center; margin-right: 5px; font-size: 18px; }
+
+    &.el-menu--collapse i.iconfont { margin-right: 0; }
+  }
+
+  .el-menu--collapse {
+    width: 60px;
+  }
+
+  .el-menu:not(.el-menu--collapse) {
+    width: 224px;
+  }
+
+  .toggle-collapse {
+    line-height: 60px; border-width: 1px 1px 1px 0; border-style: solid; border-color: #e6e6e6; text-align: center; width: 15px; border-radius: 0 3px 3px 0; top: 50%;
+    right: -15px; margin-top: -30px; z-index: 10; position: absolute; background: white; cursor: pointer;
+
+    &:hover { background: #eeeeee; }
+  }
+}

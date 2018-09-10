@@ -1,0 +1,37 @@
+//
+// Path
+//
+
+/* 基础结构 */
+html,
+body { min-height: 100%; background: white; margin: 0; padding: 0; font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,STHeiti,"Microsoft YaHei"; font-weight: normal; color: $color-black-mid; background: #FFF; overflow-x: hidden; }
+
+input,
+textarea,
+select { font-weight: 400; outline: none; }
+
+a {
+  text-decoration: none; color: $link-color;
+
+  &:hover,
+  &:focus { text-decoration: none; color: darken($link-color, 10%); }
+}
+
+.tooltip { font-family: inherit; }
+
+.breadcrumb { background: inherit; padding: 0; margin-bottom: 15px; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { margin: 0; padding: 0; }
+
+ul,
+li { padding: 0; margin: 0; list-style: none; }
+
+
+.iconfont { display: inline-block; font-size: inherit !important; }
+
+.el-loading-mask { z-index: 20 !important; }

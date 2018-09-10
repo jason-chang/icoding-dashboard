@@ -1,0 +1,12 @@
+.success,
+.error { padding: 70px 0px 50px 0px; font-size: 3em; text-align: center; }
+
+.success { color: $color-green-dark; }
+
+.error { color: $color-pink-dark; }
+
+.words {
+  font-size: 1.5em; text-align: center; color: $color-black-light;
+
+  a { color: $color-green-dark; }
+}
